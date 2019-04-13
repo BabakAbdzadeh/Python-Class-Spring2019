@@ -6,7 +6,7 @@ firstper_string01 = "nice too meet you black board"
 secondper_string01 = "nice too meet you too"
 
 firstper_string02 = "is it your first time coding python?"
-secondper_string02 = " yeah! its my first time ,I am almost a noob"
+secondper_string02 = "yeah! its my first time ,I am almost a noob"
 
 firstper_string03 =  "you are definitely a noob"
 secondper_string03 = "don't insult me please,man you are a jerk!"
