@@ -47,13 +47,14 @@ print(numbers[::-1])
 # calculate the ( Min of right side - Min of left side) & (Max of right side - Max of left side) &
 # (average of the lest side - average of the right side) of the list below:
 lst = [9, 23, 1, 2, 3, 4, 5, 6, 7, 8, 77, 9, 10, 11]
+
 left_side_sum = sum(lst[:7])
 left_side_length = len(lst[:7])
 left_side_average = (left_side_sum/left_side_length)
 print(left_side_average)
 
-right_side_sum = sum(lst[8:])
-right_side_length = len(lst[8:])
+right_side_sum = sum(lst[7:])
+right_side_length = len(lst[7:])
 right_side_average = (right_side_sum/right_side_length)
 print(right_side_average)
 
