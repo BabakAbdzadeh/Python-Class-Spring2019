@@ -1,23 +1,27 @@
+# new study:
+# new study:
+# new study:
+
 #   -> list
 
 # using ( [] ) for define "list"
 # example :
-# *mylist = [10 , 'hello' , 10.2 ]
+my_list = [10, 'hello', 10.2]
 # this "list" can include all types
 
 # searching in list
 # example :
-# *mylist[0]
-# *print(mylist[0]) #will print first member of the list
-# *type(mylist[2])  #will show the type of the member of the list
-# *len(mylist) #will show us the length of the list
+# *my_list[0]
+# *print(my_list[0]) #will print first member of the list
+# *type(my_list[2])  #will show the type of the member of the list
+# *len(my_list) #will show us the length of the list
 # example
-# *length_of_my_list = len(mylist) #save the length of our list in a variable
+# *length_of_my_list = len(my_list) #save the length of our list in a variable
 
 
 # test
 # use sum and length to calculate the sum and average of a variable numbers = [1,2,3,4,5,6,7,8]
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9,10]
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 sum_number = sum(numbers)
 length_number = len(numbers)
 average_number = sum_number / length_number
@@ -57,40 +61,25 @@ lst = [9, 23, 1, 2, 3, 4, 5, 6, 7, 8, 77, 9, 10, 11]
 
 left_side_sum = sum(lst[:7])
 left_side_length = len(lst[:7])
-left_side_average = (left_side_sum/left_side_length)
+left_side_average = (left_side_sum / left_side_length)
 print(left_side_average)
 
 right_side_sum = sum(lst[7:])
 right_side_length = len(lst[7:])
-right_side_average = (right_side_sum/right_side_length)
+right_side_average = (right_side_sum / right_side_length)
 print(right_side_average)
 
-fraction_of_left_from_right = left_side_average-right_side_average
+fraction_of_left_from_right = left_side_average - right_side_average
 print(fraction_of_left_from_right)
 
+# for define empty list we can do this :
+# lst = []
+# for define one member list we can do this :
+# lst = [1]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# new study:
+# new study:
+# new study:
 
 #   -> tuples
 
@@ -100,3 +89,52 @@ print(fraction_of_left_from_right)
 # list is mutable
 # tuples are immutable
 # you cant use del or some syntax's for tuples or change it in code lines ( you can change it in base writing )
+
+# for define empty tuple wi can do this :
+# tpl = ()
+# for define one member tuple we can use this :
+# tpl = (1,)
+
+
+# pythontutor.com   --> for live help
+
+
+# new study:
+# new study:
+# new study:
+
+#    ->  conditions
+# example
+
+# num_1 = 1
+# num_2 = 10
+
+# comparison operators : == , > , < , >= , <=
+
+# condition_1 = num_1 > num_2
+# print(condition)    it will print False
+# condition_2 = num_1 == 1
+# print(condition_2)  it will print True
+
+# logical operators : and , or , not , xor and ...
+
+# example for declaring if number 20 is between 20 and 30
+# num_1 = 20
+# num_1 > 20 and num <30
+# or we can write : 20 < num < 30
+
+
+# new study:
+# new study:
+# new study:
+# new study:
+
+#  -> conditional phrases
+# if
+# example if 10 > 5 and 35 < 36 :
+#   do some stuffs
+#   do some stuffs
+#   do some stuffs
+# do some stuffs  --> this line is not in if condition
+
+
