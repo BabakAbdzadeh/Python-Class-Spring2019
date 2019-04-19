@@ -17,10 +17,14 @@
 
 # test
 # use sum and length to calculate the sum and average of a variable numbers = [1,2,3,4,5,6,7,8]
-number = [1,2,3,4,5,6,7,8]
-sum_number =sum(number)
-length_number = len(number)
+numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+sum_number = sum(numbers)
+length_number = len(numbers)
 average_number = sum_number / length_number
 
-print(sum_number)
-print(average_number)
+print("sum of numbers is : ", sum_number)
+print("average of numbers is: ", average_number)
+# MAX and MIN will show us max and min of our list
+print("the maximum value of numbers is :", max(numbers))
+print("the minimum value is :", min(numbers))
+
