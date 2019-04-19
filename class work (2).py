@@ -172,6 +172,23 @@ if input_num_variable % 3 == 0 :
     print("it can be divide")
 elif input_num_variable % 3 == 1:
     print("the left over is 1")
-else
+else:
     print("the left over is 2")
+
+# its work in python 2.7 but it cannot be run in python 3.7 because in python 3.7 input is
+# string not a int or float or ... ; so we should convert your input in type you want
+
+
+# correct way to write in python 3.7 :
+input_num_variable = input("please enter a number: ")
+number_variable = int(input_num_variable)
+if number_variable % 3 == 0:
+    print("it can be divide")
+elif number_variable % 3 == 1:
+    print("the left over is 1")
+else:
+    print("the left over is 2")
+
+
+
 
