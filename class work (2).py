@@ -148,4 +148,30 @@ if num % 2 == 0 :
 else:
     print("number is odd")
 
+# if we use several if's python we run all of them
+# we can use elif for conditions inside of if condition and python will run until first true or falls condition
+
+
+
+# new study:
+# new study:
+# new study:
+
+#   -> input
+
+# example :
+# value = input("please enter a number: ")
+# num = int(value)
+# print(num * 2)
+
+# Class work :
+# write a program that show us is input number can divide by 3 or show us the left over
+
+input_num_variable = input("please enter a number: ")
+if input_num_variable % 3 == 0 :
+    print("it can be divide")
+elif input_num_variable % 3 == 1:
+    print("the left over is 1")
+else
+    print("the left over is 2")
 
