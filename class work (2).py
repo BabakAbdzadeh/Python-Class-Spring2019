@@ -1,4 +1,4 @@
-# list
+#   -> list
 
 # using ( [] ) for define "list"
 # example :
@@ -27,4 +27,25 @@ print("average of numbers is: ", average_number)
 # MAX and MIN will show us max and min of our list
 print("the maximum value of numbers is :", max(numbers))
 print("the minimum value is :", min(numbers))
+
+# for choosing a specific part of the list :
+# example :
+# numbers variable locations start at zero (0) : numbers[0:7]
+sub_numbers = numbers[:5]    # this variable contains 1 , 2, 3, 4, 5
+sub_numbers2 = numbers[3:]   # this variable contains 4,5,6,7,8
+# numbers[3:] is equal to numbers[3:9] or numbers[3:10] because it ends at 7
+sub_numbers3 = numbers[3:7]  # this variable contains 4,5,6,7
+
+
+
+#  -> tuples
+
+
+# numbers_tuple = (1, 2, 3, 4, 5, 6, 7, 8)
+# whats the difference ?
+# list is mutable
+# tuples are immutable
+# you cant use del or some syntax's for tuples or change it in code lines ( you can change it in base writing )
+
+
 
