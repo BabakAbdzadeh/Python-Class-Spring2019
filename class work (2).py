@@ -48,6 +48,13 @@ print(numbers[::-1])
 # (average of the lest side - average of the right side) of the list below:
 lst = [9, 23, 1, 2, 3, 4, 5, 6, 7, 8, 77, 9, 10, 11]
 
+# for specify the left side of the lst we can do this :
+# mid = len(lst) // 2
+# left_side = lst[:mid]
+# left_average = sum(left_side) / mid
+# and go on ....
+
+
 left_side_sum = sum(lst[:7])
 left_side_length = len(lst[:7])
 left_side_average = (left_side_sum/left_side_length)
