@@ -135,6 +135,17 @@ print(fraction_of_left_from_right)
 #   do some stuffs
 #   do some stuffs
 #   do some stuffs
-# do some stuffs  --> this line is not in if condition
+# else:
+#   do some other stuffs
+#   do some other stuffs
+#   do some other stuffs
+# do some stuffs  --> this line is not in our if condition
+
+# class work
+num = 59
+if num % 2 == 0 :
+    print("number is even")
+else:
+    print("number is odd")
 
 
