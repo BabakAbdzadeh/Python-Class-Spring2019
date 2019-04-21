@@ -33,7 +33,7 @@ if ask_var == "Yes" or ask_var == "yes":
     if height_var > 3:
         height_var = height_var / 100
         if height_var > 3:
-            Print("get the hell out of here you idiot!")
+            print("get the hell out of here you idiot!")
 
     bmi_var = float(mass_var / (height_var * height_var))
 elif ask_var == "NO" or ask_var == "no":
