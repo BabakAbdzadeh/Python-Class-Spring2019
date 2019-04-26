@@ -69,9 +69,13 @@
 
 import  random
 
-secret = random.randint(1,6)
+secret = random.randint(1, 6)
 while 1:
     guess = int(input("guess number! "))
     if guess == secret:
         print("well done!")
+    elif guess >= secret:
+        print("its too much")
+    else:
+        print("go up man!")
 
