@@ -66,3 +66,12 @@
 # For loop
 
 # for ... in ... :
+
+import  random
+
+secret = random.randint(1,6)
+while 1:
+    guess = int(input("guess number! "))
+    if guess == secret:
+        print("well done!")
+
