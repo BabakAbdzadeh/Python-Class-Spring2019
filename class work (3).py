@@ -38,7 +38,7 @@ n = int(input("insert n"))
 while i < n:
     i = i + 1
     var_for_cal = var_for_cal + var_for_cal/(i ** 2)
-pi = (var_for_cal ** 0.5) * 6
+pi = (var_for_cal * 6) ** 0.5
 print(pi)
 
 
