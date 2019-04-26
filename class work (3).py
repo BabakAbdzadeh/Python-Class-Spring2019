@@ -42,12 +42,27 @@
 # print(pi)
 # example :
 # addad e aval
-num = 1000001
-i = 2
-b = 2
+# num = 1000001
+# i = 2
+# b = 2
+#
+# while num % i != 0:
+#     i = i + 1
+#
+# print(i==num)
+#
+# new study
+# new study
+#   range()
+# range hast three argument
+# start, stop, step
+# if you just pust one argument you defined the stop with 0 start and 1 step : range(100)
+# if you put two argument you defined the the start and stop with 1 step : range(50 , 150)
+# for 3 argument it is : range(50 , 100 , 2 )
 
-while num % i != 0:
-    i = i + 1
 
-print(i==num)
+# new study
+# new study
+# For loop
 
+# for ... in ... :
