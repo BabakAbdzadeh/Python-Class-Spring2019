@@ -40,7 +40,8 @@
 #     var_for_cal = var_for_cal + var_for_cal/(i ** 2)
 # pi = (var_for_cal * 6) ** 0.5
 # print(pi)
-
+# example :
+# addad e aval
 num = 1000001
 i = 2
 

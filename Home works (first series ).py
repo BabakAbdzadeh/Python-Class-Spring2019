@@ -49,3 +49,9 @@ elif 18.5 < bmi_var <= 25:
     print("your BMI is:", bmi_var, " and its 'Normal'")
 else:
     print("your BMI is:", bmi_var, " and its 'Underweight'")
+
+# Third Ex.
+# create a mirror list for
+
+
+main_list = ['babak', 'yensid', 'harpo', 'nacirma', 'erewhon', 'Yob', 'Silopanna', 'Retsof', 'Llareggub', 'Serutan']
