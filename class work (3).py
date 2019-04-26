@@ -31,14 +31,21 @@
 #    new_member = seq[-1] + seq[-2]
 #    new_member = seq + [new_member]
 #    print(seq)
+# example : calculating Pi with Riemann zeta
+# i = 1
+# var_for_cal = 1
+# n = int(input("insert n"))
+# while i < n:
+#     i = i + 1
+#     var_for_cal = var_for_cal + var_for_cal/(i ** 2)
+# pi = (var_for_cal * 6) ** 0.5
+# print(pi)
 
-i = 1
-var_for_cal = 1
-n = int(input("insert n"))
-while i < n:
+num = 1000001
+i = 2
+
+
+while num % i != 0:
     i = i + 1
-    var_for_cal = var_for_cal + var_for_cal/(i ** 2)
-pi = (var_for_cal * 6) ** 0.5
-print(pi)
-
+print(i)
 
