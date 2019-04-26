@@ -44,9 +44,10 @@
 # addad e aval
 num = 1000001
 i = 2
-
+b = 2
 
 while num % i != 0:
     i = i + 1
-print(i)
+
+print(i==num)
 
