@@ -49,13 +49,17 @@
 # print(is_prime(14))
 # sort lst list from min to max:
 lst = [1, 3, 5, 9, 4, 2, 7, 11, 10]
-lst_sort = []
-i = 0
-while i != len(lst):
 
-    value = min(lst)
-    lst.remove(value)
-    lst_sort.append(value)
-print(lst_sort)
+def my_sortted_list(lst):
+    lst_sort = []
+    i = 0
+
+    while i != len(lst):
+
+        value = min(lst)
+        lst.remove(value)
+        lst_sort.append(value)
+    return lst_sort
+print(my_sortted_list(lst))
 
 
