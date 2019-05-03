@@ -50,16 +50,39 @@
 # sort lst list from min to max:
 lst = [1, 3, 5, 9, 4, 2, 7, 11, 10]
 
-def my_sortted_list(lst):
-    lst_sort = []
-    i = 0
+# def my_sortted_list(lst):
+#     lst_sort = []
+#     i = 0
+#
+#     while i != len(lst):
+#
+#         value = min(lst)
+#         lst.remove(value)
+#         lst_sort.append(value)
+#     return lst_sort
+# print(my_sortted_list(lst))
 
-    while i != len(lst):
+def bubbleSort(arr):
+    n = len(arr)
 
-        value = min(lst)
-        lst.remove(value)
-        lst_sort.append(value)
-    return lst_sort
-print(my_sortted_list(lst))
+    # Traverse through all array elements
+    for i in range(n):
+
+        # Last i elements are already in place
+        for j in range(0, n - i - 1):
+
+            # traverse the array from 0 to n-i-1
+            # Swap if the element found is greater
+            # than the next element
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
 
 
+# Driver code to test above
+arr = [64, 34, 25, 12, 22, 11, 90]
+
+bubbleSort(arr)
+
+print("Sorted array is:")
+for i in range(len(arr)):
+    print("%d" % arr[i]), 
