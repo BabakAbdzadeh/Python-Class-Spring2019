@@ -3,9 +3,12 @@ from typing import Tuple
 
 def zip_(a, b):
     i = 0
-    zipped: Tuple = ()
+    zipped = []
     while i != len(a):
-        zipped(i) =  tuple(a[i], b[i])
+        zipped: object
+
+        first_input = (a[i], b[i])
+        zipped.append(first_input)
         i += 1
 
     return zipped
