@@ -13,3 +13,26 @@ def duration_calculator(data_in):
 
 duration = duration_calculator(data)
 print(duration)
+
+
+def duration_description(data_in):
+    i = 0
+    t1 = 300
+    t2 = 400
+    description = ""
+    len_data_in_variable = len(data_in)
+    while i != len_data_in_variable:
+        comp_variable = data_in.pop(0)
+        if comp_variable < t1:
+            describe_char = "S"
+        elif comp_variable >= t2:
+            describe_char = "L"
+        else:
+            describe_char = "M"
+        description = description + describe_char
+        i += 1
+    return description
+
+
+duration_describe = duration_description(duration)
+print(duration_describe)
