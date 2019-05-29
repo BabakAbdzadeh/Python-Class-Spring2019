@@ -135,4 +135,10 @@ def special_sequence(string, data_in):
         return 'no match found!'
 
 
-print(special_sequence(duration_describe, data))
+special_sequence_list = special_sequence(duration_describe, data)
+sequences_list = special_sequence_list[0]
+start_stop_time_location = special_sequence_list[1]
+start_stop_time_duration = special_sequence_list[2]
+print(sequences_list)
+print(start_stop_time_location)
+print(start_stop_time_duration)
