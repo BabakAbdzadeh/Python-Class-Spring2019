@@ -57,6 +57,7 @@ data = [
 ]
 
 
+# 1
 def duration_calculator(data_in):
     duration_calc = []
     i = 0
@@ -71,6 +72,7 @@ duration = duration_calculator(data)
 print(duration)
 
 
+# 2
 def duration_description(data_in):
     i = 0
     t1 = 600
@@ -94,13 +96,43 @@ duration_describe = duration_description(duration)
 print(duration_describe)
 
 
-def special_sequence(string):
+# 3
+def special_sequence(string, data_in):
+    match_list = []
     pattern = 'LS{1,4}L'
+    start_index_data = []
+    end_index_data = []
+    duration_time_list = []
+
     if re.search(pattern, string):
-        x = re.findall(pattern, string)
-        return x
+        # 3.1
+
+        pattern_based_find = re.findall(pattern, string)
+        for i in range(len(pattern_based_find)):
+            first_match_of_string = re.search(pattern, string).span()
+            match_list.append(first_match_of_string)
+            string = re.sub(pattern, '', string, 1)
+        # 3.2
+
+        for i in range(len(match_list)):
+            changing_variable = match_list[i]
+            start_index_data.append(changing_variable[0] + 1)
+            end_index_data.append(changing_variable[1] + 1)
+        start_stop_time = zip(start_index_data, end_index_data)
+        start_stop_time = list(start_stop_time)
+        # 3.3
+
+        for i in range(len(start_stop_time)):
+            opening_tuples = start_stop_time[i]
+            start_value = opening_tuples[0]
+            stop_value = opening_tuples[1]
+            duration_time = data_in[stop_value] - data_in[start_value]
+            duration_time_list.append(duration_time)
+
+        return pattern_based_find, start_stop_time, duration_time_list
+
     else:
-        return 'no match found! ex12'
+        return 'no match found!'
 
 
-print(special_sequence(duration_describe))
+print(special_sequence(duration_describe, data))
