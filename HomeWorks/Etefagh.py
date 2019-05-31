@@ -142,3 +142,6 @@ start_stop_time_duration = special_sequence_list[2]
 print(sequences_list)
 print(start_stop_time_location)
 print(start_stop_time_duration)
+print(data[120])
+print(data[117])
+
