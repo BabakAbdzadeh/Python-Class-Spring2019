@@ -28,6 +28,7 @@ def word_frequency(input_string):
     input_words = re.findall(pattern, input_string)
     unique = []
     duplicate_count = []
+    input_no_duplicate_dict = {}
     i = 0
     for words in range(len(input_words)):
         duplicate_pattern = str(input_words[words])
@@ -40,11 +41,16 @@ def word_frequency(input_string):
             i += 1
             # input_words.append(input_words[words])
         duplicate_count.append(i)
-
-    input_no_duplicate_dict = dict(itertools.zip_longest(*[iter(unique)] * 2, fillvalue=""))
-    for dict_member in input_no_duplicate_dict:
-        input_no_duplicate_dict[dict_member] = duplicate_count[dict_member]
-    return input_no_duplicate_dict
+        i = 0
+    duplicate_count_dictionary = dict(zip(unique, duplicate_count))
+    # for words in unique:
+    #     input_no_duplicate_dict[words] = {}
+    #  for i in range(len(unique)):
+    #      input_no_duplicate_dict[i] = duplicate_count[i]
+    # input_no_duplicate_dict.update(duplicate_count: [])
+    # for dict_member in range(len(input_no_duplicate_dict)):
+    #     input_no_duplicate_dict[dict_member] = str(duplicate_count[dict_member])
+    return duplicate_count_dictionary
 
 
 text_words = word_counter(wasteland_text)
