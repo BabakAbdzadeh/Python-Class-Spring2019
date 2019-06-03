@@ -1,10 +1,10 @@
-import itertools #its important
+import itertools  # its important
 import re
 from typing import List, Any
 
 wasteland = open('wasteland.txt', mode="r")
 wasteland_output = open('out_words_count.txt', mode='w')
-
+wasteland_outMostFrequent = open('out_most_frequent.txt', mode='w')
 wasteland_text = wasteland.read()
 
 
@@ -51,16 +51,31 @@ def word_frequency(input_string):
     return counts
 
 
+def max_values_of_frequency(input_string):
+    max_value_list = []
+    max_keys_list = []
+    i = 0
+    dic = word_frequency(input_string)
+    while i != 10:
+        max_value_dic = max(dic.values())
+        max_value_list.append(max_value_dic)
+        max_keys = [k for k, v in dic.items() if v == max_value_dic]
+        max_as_string = ''.join(max_keys)
+        del dic[max_as_string]
+        max_keys_list.append(max_as_string)
+        i += 1
+    max_value_dic_return = dict(zip(max_keys_list, max_value_list))
+    return max_value_dic_return
+
+
 text_words = word_counter(wasteland_text)
 
 text_words_duplicate = str(text_words[0])
 text_words_noDuplicate = str(text_words[1])
-
 
 wasteland_output.write(text_words_duplicate)
 wasteland_output.write('\n')
 wasteland_output.write(text_words_noDuplicate)
 print(word_frequency(wasteland_text))
 
-
-
+print(max_values_of_frequency(wasteland_text))
