@@ -8,6 +8,7 @@ wasteland_outMostFrequent = open('out_most_frequent.txt', mode='w')
 wasteland_text = wasteland.read()
 
 
+# 1
 def word_counter(input_string):
     pattern = "\w{2,}"
     input_words = re.findall(pattern, input_string)
@@ -23,6 +24,7 @@ def word_counter(input_string):
     return words_count, words_without_duplicate
 
 
+# 2
 def word_frequency(input_string):
     pattern = "\w{2,}"
     input_words = re.findall(pattern, input_string)
@@ -51,6 +53,7 @@ def word_frequency(input_string):
     return counts
 
 
+# 3
 def max_values_of_frequency(input_string):
     max_value_list = []
     max_keys_list = []
@@ -60,7 +63,10 @@ def max_values_of_frequency(input_string):
         max_value_dic = max(dic.values())
         max_value_list.append(max_value_dic)
         max_keys = [k for k, v in dic.items() if v == max_value_dic]
-        max_as_string = ''.join(max_keys)
+        max_as_string = ''.join(
+            max_keys)  # we need to convert it to string because it is list and we appent a list into another list ,
+        # because of that we cant convert to list into a dic
+
         del dic[max_as_string]
         max_keys_list.append(max_as_string)
         i += 1
@@ -76,6 +82,16 @@ text_words_noDuplicate = str(text_words[1])
 wasteland_output.write(text_words_duplicate)
 wasteland_output.write('\n')
 wasteland_output.write(text_words_noDuplicate)
-print(word_frequency(wasteland_text))
-
 print(max_values_of_frequency(wasteland_text))
+# writing in output for question 3
+for i in range(len(max_values_of_frequency(wasteland_text))):
+    x = list(max_values_of_frequency(wasteland_text).items())
+    z = x[i]
+    a = z[0]
+    b = str(z[1])
+    wasteland_outMostFrequent.write(str(i+1)+".")
+    wasteland_outMostFrequent.write(a)
+    wasteland_outMostFrequent.write("  ")
+    wasteland_outMostFrequent.write(b)
+    wasteland_outMostFrequent.write('\n')
+
