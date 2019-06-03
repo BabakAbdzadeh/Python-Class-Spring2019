@@ -26,31 +26,29 @@ def word_counter(input_string):
 def word_frequency(input_string):
     pattern = "\w{2,}"
     input_words = re.findall(pattern, input_string)
-    unique = []
-    duplicate_count = []
-    input_no_duplicate_dict = {}
-    i = 0
-    for words in range(len(input_words)):
-        duplicate_pattern = str(input_words[words])
-        if input_words[words] not in unique:
-            unique.append(input_words[words])
-            duplicate_count.append(0)
-        while re.search(duplicate_pattern, input_string):
-            # input_words.remove(input_words[words])
-            input_string = re.sub(duplicate_pattern, " ", input_string, 1)
-            i += 1
-            # input_words.append(input_words[words])
-        duplicate_count.append(i)
-        i = 0
-    duplicate_count_dictionary = dict(zip(unique, duplicate_count))
-    # for words in unique:
-    #     input_no_duplicate_dict[words] = {}
-    #  for i in range(len(unique)):
-    #      input_no_duplicate_dict[i] = duplicate_count[i]
-    # input_no_duplicate_dict.update(duplicate_count: [])
-    # for dict_member in range(len(input_no_duplicate_dict)):
-    #     input_no_duplicate_dict[dict_member] = str(duplicate_count[dict_member])
-    return duplicate_count_dictionary
+    # unique = []
+    # duplicate_count = []
+    counts = {}
+    for word in input_words:
+        if word not in counts:
+            counts[word] = 0
+        counts[word] += 1
+    # i = 0
+    # for words in range(len(input_words)):
+    #     duplicate_pattern = str(input_words[words])
+    #     if input_words[words] not in unique:
+    #         unique.append(input_words[words])
+    #         duplicate_count.append(0)
+    #     while re.search(duplicate_pattern, input_string):
+    #
+    #         input_string = re.sub(duplicate_pattern, "", input_string, 1)
+    #         i += 1
+    #
+    #     duplicate_count.append(i)
+    #     i = 0
+    # duplicate_count_dictionary = dict(zip(unique, duplicate_count))
+
+    return counts
 
 
 text_words = word_counter(wasteland_text)
