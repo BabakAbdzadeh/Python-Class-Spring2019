@@ -83,14 +83,6 @@ def max_values_of_frequency(input_string):
     return max_value_dic_return
 
 
-text_words = word_counter(wasteland_text)
-
-text_words_duplicate = str(text_words[0])
-text_words_noDuplicate = str(text_words[1])
-wasteland_output.write(text_words_duplicate)
-wasteland_output.write('\n')
-wasteland_output.write(text_words_noDuplicate)
-
 # writing in output for question 3
 for i in range(len(max_values_of_frequency(wasteland_text))):
     x = list(max_values_of_frequency(wasteland_text).items())
