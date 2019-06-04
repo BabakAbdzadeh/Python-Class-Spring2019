@@ -24,6 +24,15 @@ def word_counter(input_string):
     return words_count, words_without_duplicate
 
 
+text_words = word_counter(wasteland_text)
+
+text_words_duplicate = str(text_words[0])
+text_words_noDuplicate = str(text_words[1])
+wasteland_output.write(text_words_duplicate)
+wasteland_output.write('\n')
+wasteland_output.write(text_words_noDuplicate)
+
+
 # 2
 def word_frequency(input_string):
     pattern = "\w{2,}"
@@ -78,20 +87,44 @@ text_words = word_counter(wasteland_text)
 
 text_words_duplicate = str(text_words[0])
 text_words_noDuplicate = str(text_words[1])
-
 wasteland_output.write(text_words_duplicate)
 wasteland_output.write('\n')
 wasteland_output.write(text_words_noDuplicate)
-print(max_values_of_frequency(wasteland_text))
+
 # writing in output for question 3
 for i in range(len(max_values_of_frequency(wasteland_text))):
     x = list(max_values_of_frequency(wasteland_text).items())
     z = x[i]
     a = z[0]
     b = str(z[1])
-    wasteland_outMostFrequent.write(str(i+1)+".")
+    wasteland_outMostFrequent.write(str(i + 1) + ".")
     wasteland_outMostFrequent.write(a)
     wasteland_outMostFrequent.write("  ")
     wasteland_outMostFrequent.write(b)
     wasteland_outMostFrequent.write('\n')
 
+
+# 4
+def top_five_long(input_string):
+    list_of_keys = list(word_frequency(input_string).keys())
+    len_var = []
+    for i in range(len(list_of_keys)):
+        len_var.append(int(len(list_of_keys[i])))
+
+    len_list = []
+
+    for i in range(0, 5):
+        len_list.append(max(len_var))
+        len_var.remove(max(len_var))
+
+    min_characters_in_top_long = str(min(len_list))
+    pattern = "\w{" + str(min_characters_in_top_long) + ",}"
+    longest_words = re.findall(pattern, wasteland_text)
+
+    frequency_dic = word_frequency(wasteland_text)
+    time_keys_repeated = []
+    for i in range(0, 5):
+        search_keys = str(longest_words[i])
+        time_keys_repeated.append(frequency_dic[search_keys])
+    topfive_longchar_dictionary = dict(zip(longest_words, time_keys_repeated))
+    return topfive_longchar_dictionary
