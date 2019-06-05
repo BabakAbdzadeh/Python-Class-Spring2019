@@ -176,3 +176,4 @@ def capital_counter(input_string):
 
 write_dic_for_out_put(capital_counter(wasteland_text), wasteland_capital_counter, "no", "", " (", ")\n")
 
+
