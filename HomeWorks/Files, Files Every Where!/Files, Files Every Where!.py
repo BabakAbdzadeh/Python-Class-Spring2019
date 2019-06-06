@@ -50,6 +50,7 @@ print(no_parent_file)
 # Done
 #
 # 2 find files without children:
+no_children_var = open('no_children.txt', mode='w')
 list_no_children = []
 list_with_children = []
 txt_as_string = ' '.join(files_txt_list)
@@ -64,3 +65,9 @@ for items in file_names:
 print(len(list_no_children))
 print(list_no_children)
 
+for i in range(len(list_no_children)):
+    no_children_var.write(str(i))
+    no_children_var.write('.')
+    no_children_var.write(' ')
+    no_children_var.write(list_no_children[i])
+    no_children_var.write('\n')
