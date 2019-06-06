@@ -1,6 +1,5 @@
 import glob
 import re
-import os
 
 # putting all file names into a list:
 list_of_files = glob.glob('./files/*.txt')
@@ -32,7 +31,7 @@ files_dict = dict(zip(file_names, files_txt_list))
 
 # done
 #
-# 1 find no parent file :
+# 1 find no parent files :
 
 # Get a list of keys from dictionary which has the given value
 def get_keys_by_value(dict_of_elements, value_to_find):
@@ -49,3 +48,19 @@ no_parent_file = get_keys_by_value(files_dict, '0')
 print(no_parent_file)
 
 # Done
+#
+# 2 find files without children:
+list_no_children = []
+list_with_children = []
+txt_as_string = ' '.join(files_txt_list)
+for items in file_names:
+    pattern_for_search = str(items)
+    if re.search(pattern_for_search, txt_as_string):
+
+        list_with_children.append(items)
+    else:
+        list_no_children.append(items)
+
+print(len(list_no_children))
+print(list_no_children)
+
