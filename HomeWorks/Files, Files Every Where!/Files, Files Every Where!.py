@@ -57,7 +57,6 @@ txt_as_string = ' '.join(files_txt_list)
 for items in file_names:
     pattern_for_search = str(items)
     if re.search(pattern_for_search, txt_as_string):
-
         list_with_children.append(items)
     else:
         list_no_children.append(items)
@@ -71,3 +70,32 @@ for i in range(len(list_no_children)):
     no_children_var.write(' ')
     no_children_var.write(list_no_children[i])
     no_children_var.write('\n')
+# Done
+
+# Q3:
+count = 0
+longest = 0
+index_no_parent = 0
+generation_test_list = []
+generation_real_list = []
+while index_no_parent != len(no_parent_file):
+    father = no_parent_file[index_no_parent]
+    generation_test_list.append(father)
+    for z in files_txt_list:
+        if re.search(father, txt_as_string):
+            count += 1
+            children = re.findall(father, txt_as_string)
+            generation_test_list.append(children)
+            father = children[0]
+        else:
+            1
+    if count >= longest:
+        longest = count
+        generation_real_list = generation_test_list
+    else:
+        1
+    index_no_parent += 1
+
+print(longest)
+print(len(generation_real_list))
+# print(generation_real_list)
